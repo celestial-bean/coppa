@@ -1,0 +1,52 @@
+body{
+  background-color:gray
+}
+.blog{
+  align-content: center;
+  border-style:solid;
+  border-radius: .5cm;
+  border-width: .15cm;
+  margin: 1cm;
+}
+.post{
+  border-style: solid;
+  border-radius: .5cm;
+  border-width: .15cm;
+  margin:1cm .2cm .2cm;
+}
+.imgBox{
+  margin: 1cm 0cm 1cm;
+  font-size:150%;
+  font-weight:900
+}
+.chessButton{
+  background-color: #4242ea;
+  color: #ffdcaa;
+  width: 25%;
+  height:1cm;
+  border-style: solid;
+  border-width: 2px;
+  border-radius:6px;
+}
+
+.firstBody{
+  margin:2cm;
+  width:90%;
+  border-style:solid;
+  border-width: .3cm;
+  margin-left: auto;
+  margin-right:auto;
+}
+.title{
+  font-weight:900;
+  font-size:300%;
+}
+.evidence{
+  border-style: dashed;
+  border-width: .2cm;
+  border-color: red;
+  margin-bottom: 1cm;
+}
+.subtitle{
+  font-size: 150%
+}
