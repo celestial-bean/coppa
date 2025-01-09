@@ -18,3 +18,7 @@ document.getElementById("emuBird").addEventListener("mouseover", ()=>{
   sound.play()
 })
 
+
+if (Math.floor(Math.random()*100)!=99){
+document.getElementById("kiwi").remove()
+}
