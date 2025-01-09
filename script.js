@@ -10,5 +10,11 @@ async function playChess() {
 document.querySelector(".chessButton").addEventListener("click", () => {
   playChess()
 })
+var emuSoundPlaying=false
 
+document.getElementById("emuBird").addEventListener("mouseover", ()=>{
+
+  let sound = new Audio("audio/freeBird.mp3");
+  sound.play()
+})
 
