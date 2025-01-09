@@ -24,6 +24,6 @@ document.getElementById("emuBird").addEventListener("click", ()=>{
 })
 var val=Math.floor(Math.random()*100)
 alert(val,val!=99)
-if (Math.floor(Math.random()*100)!=99){
+if (val!=99){
 document.getElementById("kiwi").remove()
 }
