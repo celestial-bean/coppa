@@ -47,6 +47,12 @@ body{
   border-color: red;
   margin-bottom: 1cm;
 }
+.evidence span{
+  color:#ee8924; 
+  font-size: 200%;
+  font-weight:700"
+  
+}
 .subtitle{
   font-size: 150%
 }
