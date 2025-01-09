@@ -17,11 +17,16 @@ document.getElementById("emuBird").addEventListener("mouseover", ()=>{
   let sound = new Audio("audio/freeBird.mp3");
   sound.play()
 })
-document.getElementById("emuBird").addEventListener("click", ()=>{
-  let sound = new Audio("audio/freeBird.mp3");
-  sound.play()
-})
+document.getElementById("emuBird").addEventListener("mouseover", () => {
+  if (!emuSoundPlaying) {
+    emuSoundPlaying = true;
+    let sound = new Audio("audio/freeBird.mp3");
+    sound.play();
+    sound.onended = () => emuSoundPlaying = false;
+  }
+});
 var val=Math.floor(Math.random()*100)
 if (val!=99){
 document.getElementById("kiwi").remove()
 }
+alert("skibidi toilet")
