@@ -1,32 +1,31 @@
-async function playChess() {
-  let doc = document.createElement("script")
-  let script = await fetch(
-    "https://raw.githubusercontent.com/Logan-Garcia-inc/browser-Chess/refs/heads/main/script.js",
-  )
-  script = await script.text()
-  doc.textContent = script
-  document.body.append(doc)
-}
-document.querySelector(".chessButton").addEventListener("click", () => {
-  playChess()
-})
+
 var emuSoundPlaying=false
+ var fortunateSon = new Audio("audio/fortunate.mp4")
+ fortunateSon.volume=.7
+ fortunateSon.play()
 
-document.getElementById("emuBird").addEventListener("mouseover", ()=>{
-
-  let sound = new Audio("audio/freeBird.mp3");
-  sound.play()
-})
-document.getElementById("emuBird").addEventListener("mouseover", () => {
-  if (!emuSoundPlaying) {
+ function birdSound(){
+ if (!emuSoundPlaying) {
     emuSoundPlaying = true;
+    fortunateSon.pause()
     let sound = new Audio("audio/freeBird.mp3");
+    sound.volume=0.7
     sound.play();
-    sound.onended = () => emuSoundPlaying = false;
+    sound.onended = () => {emuSoundPlaying = false;fortunateSon.play()};
   }
-});
-var val=Math.floor(Math.random()*100)
-if (val!=99){
-document.getElementById("kiwi").remove()
 }
-alert("skibidi toilet")
+
+document.getElementById("emuBird").addEventListener("mouseover", () => {
+ birdSound()
+});
+
+ document.getElementById("emuBird").addEventListener("click", () => {
+   birdSound()
+  });
+ 
+// var val=Math.floor(Math.random()*50)
+// console.log(val)
+// if (val!=49){
+// document.getElementById("kiwi").remove()
+// }
+
