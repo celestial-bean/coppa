@@ -17,8 +17,13 @@ document.getElementById("emuBird").addEventListener("mouseover", ()=>{
   let sound = new Audio("audio/freeBird.mp3");
   sound.play()
 })
+document.getElementById("emuBird").addEventListener("click", ()=>{
 
-
+  let sound = new Audio("audio/freeBird.mp3");
+  sound.play()
+})
+var val=Math.floor(Math.random()*100)
+alert(val,val!=99)
 if (Math.floor(Math.random()*100)!=99){
 document.getElementById("kiwi").remove()
 }
