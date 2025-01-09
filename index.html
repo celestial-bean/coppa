@@ -21,6 +21,7 @@
         letters+=e.key
       }
       console.log(letters)
+      letters = letters.slice(-10); // Keeps only the last 10 characters
       if(/coppa/.test(letters)){
         
         window.location.href = "real.html"
@@ -31,9 +32,9 @@
       click++
       if (click==10){window.location.href = "real.html"
       }
+
       }
-    }
-    }
+
     </script>
 </body>
 
