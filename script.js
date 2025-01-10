@@ -1,8 +1,19 @@
 
 var emuSoundPlaying=false
- var fortunateSon = new Audio("audio/fortunate.mp4")
+var fortunateSonPlaying=false
+function fortunate(){
+  if(!fortunateSonPlaying){
+    fortunateSonPlaying=true
+  
+  var fortunateSon = new Audio("audio/fortunate.mp4")
  fortunateSon.volume=.7
  fortunateSon.play()
+    fortunateSon.onended = () => fortunateSonPlaying = false
+  
+}}
+document.body.addEventListener("onmouseover",fortunate)
+
+document.body.addEventListener("click",fortunate)
 
  function birdSound(){
  if (!emuSoundPlaying) {
