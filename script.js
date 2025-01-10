@@ -1,11 +1,10 @@
 
 var emuSoundPlaying=false
 var fortunateSonPlaying=false
+var fortunateSon = new Audio("audio/fortunate.mp4")
 function fortunate(){
   if(!fortunateSonPlaying){
     fortunateSonPlaying=true
-  
-  var fortunateSon = new Audio("audio/fortunate.mp4")
  fortunateSon.volume=.7
  fortunateSon.play()
     fortunateSon.onended = () => fortunateSonPlaying = false
