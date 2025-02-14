@@ -2,10 +2,12 @@
 var emuSoundPlaying=false
 var fortunateSonPlaying=false
 var fortunateSon = new Audio("audio/fortunate.mp4")
+var freeBird = new Audio("audio/freeBird.mp3");
+    freeBird.volume=0.7
 function fortunate(){
   if(!fortunateSonPlaying){
     fortunateSonPlaying=true
- fortunateSon.volume=.7
+ fortunateSon.volume=.6
  fortunateSon.play()
     fortunateSon.onended = () => fortunateSonPlaying = false
   
@@ -14,15 +16,13 @@ document.body.addEventListener("onmouseover",fortunate)
 
 document.body.addEventListener("click",fortunate)
 
- function birdSound(){
+ function birdSound(stop=false){ 
  if (!emuSoundPlaying) {
     emuSoundPlaying = true;
     fortunateSon.pause()
-    let sound = new Audio("audio/freeBird.mp3");
-    sound.volume=0.7
-    sound.play();
-    sound.onended = () => {emuSoundPlaying = false;fortunateSon.play()};
-  }
+    freeBird.play();
+    freeBird.onended = () => {emuSoundPlaying = false;fortunateSon.play()};
+   else if(stop){freeBird.pause();freeBird.currentTime=0;fortunate()}
 }
 
 document.getElementById("emuBird").addEventListener("mouseover", () => {
